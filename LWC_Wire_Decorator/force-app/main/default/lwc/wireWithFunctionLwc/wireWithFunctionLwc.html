@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Wire With Function">
+        <template lwc:if={accountsData}>
+            <lightning-datatable
+                key-field="id"
+                data={accountsData}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template lwc:elseif={errorData}>
+            <c-error-panel errors={errorData}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
